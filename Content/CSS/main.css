@@ -696,3 +696,30 @@
     width: 25px;
 }
 .DZ_BTT{background: #ffffff00;border: 0px;}
+.main_weeks{
+	display: flex;
+	border: 1px solid black;
+	border-radius: 10px;
+	flex-wrap: wrap;
+    flex-direction: row;
+	width: fit-content;
+	justify-content: space-between;
+}
+#p_y{
+	font-size: 33px;
+    font-weight: 700;
+}
+.week_main_obj{
+	border-radius: 15px;
+    width: 70px;
+    height: 120px;
+    background-color: rgba(255, 0, 0, 0.144);
+    margin: 10px;
+	/*border: 2px solid red;
+	box-shadow: inset red 0px 0px 6px 1px;*/
+	display: flex;
+    align-items: center;
+	font-size: 13px;
+	padding: 4px;
+}
+.pointer{background-color: red;width: 2px; height: 2px; border-radius: 50%;}
