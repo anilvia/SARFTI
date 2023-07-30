@@ -43,3 +43,31 @@ function notification_perm(){var currentPermission;
         document.querySelector('.messages-section').classList.remove('show');
       });
     });
+
+
+    // Код для развёртывания задачи к паре (Желтый блок со стрелкой в конце строки пары)
+    let paraImportant = document.body.querySelector(".para__important");
+    let paraImportantToggleClass = document.body.querySelector(".para__important");
+    let paraMainExtended = document.body.querySelector(".para__main-extended");
+    let paraImportantDescription = document.body.querySelector(".Int_buttons");
+
+
+    // Работает на 70% (я запутався, доделаю).
+
+
+    function paraExtention () {
+      paraMainExtended.classList.toggle("extended");
+      paraImportant.classList.toggle("extended");
+      paraMainExtended.style.height = 200 + "px";
+
+      document.body.querySelector(".Int_buttons").classList.toggle("extended");
+      document.body.querySelector(".Int_buttons").style.display = "grid";
+
+        // if (paraImportantToggleClass.contains("extended")) {
+        //   paraMainExtended.style.height = 200 + "px";
+        //   document.body.querySelector(".Int_buttons").style = "display: grid; max-height: 200px";
+        //}
+
+    }
+    paraImportant.addEventListener("click", paraExtention)
+    console.log(paraImportant);
