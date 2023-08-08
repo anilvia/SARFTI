@@ -47,10 +47,13 @@ function notification_perm(){var currentPermission;
 
     // Код для развёртывания задачи к паре (Желтый блок со стрелкой в конце строки пары)
     let paraImportant = document.body.querySelector(".para__important");
+    let paraImportantSvg = document.body.querySelector(".para__important > svg");
     let paraImportantToggleClass = document.body.querySelector(".para__important");
     let paraMainExtended = document.body.querySelector(".para__main-extended");
     let paraImportantDescription = document.body.querySelector(".Int_buttons");
-
+    let paraTwoTestGridWrapper = document.body.querySelector(".para2__test-grid_wrapper");
+    let paraTaskExtendedWrapper = document.body.querySelector(".para__task-extended");
+    let paraTaskExtended = document.body.querySelector(".para__task-extended > p");
 
     // Работает на 70% (я запутався, доделаю).
 
@@ -58,10 +61,36 @@ function notification_perm(){var currentPermission;
     function paraExtention () {
       paraMainExtended.classList.toggle("extended");
       paraImportant.classList.toggle("extended");
-      paraMainExtended.style.height = 200 + "px";
 
-      document.body.querySelector(".Int_buttons").classList.toggle("extended");
-      document.body.querySelector(".Int_buttons").style.display = "grid";
+      if (paraMainExtended.classList.contains("extended") || paraImportant.classList.contains("extended")) {
+            paraMainExtended.style.height = 200 + "px";
+            paraMainExtended.style.alignItems = "center";
+            paraImportant.style.height = 100 + "%";
+            paraImportant.style.alignItems = "center";
+            paraImportantSvg.style.rotate = "180deg";
+            
+            paraTwoTestGridWrapper.style.paddingBottom = 100 + "px";
+            paraTwoTestGridWrapper.style.paddingBottom = 100 + "px";
+
+            paraTaskExtended.style.display = "flex";
+            paraTaskExtended.style.paddingTop = "80px";
+
+            paraTaskExtendedWrapper.style.display = "grid";
+            paraTaskExtendedWrapper.style.position = "relative";
+            paraTaskExtendedWrapper.style.alignSelf = "flex-end";
+            
+      } else {
+            paraMainExtended.style.height = "";
+            paraImportant.style.height = "";
+            paraImportant.style.alignItems = "";
+            paraImportantSvg.style.rotate = "360deg";
+            paraTwoTestGridWrapper.style.paddingBottom = "";
+            paraTaskExtended.style.display = "";
+            paraTaskExtendedWrapper.style.display = "";
+      }
+
+      //document.body.querySelector(".Int_buttons").classList.toggle("extended");
+      // document.body.querySelector(".Int_buttons").style.display = "grid";
 
         // if (paraImportantToggleClass.contains("extended")) {
         //   paraMainExtended.style.height = 200 + "px";

@@ -733,6 +733,20 @@
 	grid-template-rows: 1fr;
 }
 
+.para__task-extended{
+	display: none;
+	grid-column: 1/4;
+	grid-auto-flow: row dense;
+	align-self: center;
+	justify-content: space-around;
+	marks: #ffd92c;
+	/* padding-top: 80px; */
+}
+
+.para__task-extended > p > mark {
+	background-color: #ffd92c;
+}
+
 .extended{
 	max-height: 200px;
 	display: grid;
